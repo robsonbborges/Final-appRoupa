@@ -34,7 +34,7 @@ public class Bermuda extends Roupa {
 			valorPromocao = 2;
 		}
 
-		return this.getValor() / valorPromocao;
+		return this.getValor() / valorPromocao + this.getTamanho();
 	}
 
 	public float getTamanho() {

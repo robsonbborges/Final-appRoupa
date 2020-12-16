@@ -53,7 +53,7 @@ public class Camisa extends Roupa {
 	}
 
 	public void setCor (String cor) throws CorInvalidaException {
-		if(cor != null) {
+		if(cor = null) {
 			throw new CorInvalidaException ("Cor Invalida.");
 		}
 		
