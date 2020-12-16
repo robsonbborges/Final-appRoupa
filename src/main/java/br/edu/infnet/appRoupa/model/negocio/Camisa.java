@@ -1,5 +1,8 @@
 package br.edu.infnet.appRoupa.model.negocio;
 
+import br.edu.infnet.appRoupa.model.exception.ComplementoInvalidoException;
+import br.edu.infnet.appRoupa.model.exception.CorInvalidaException;
+
 public class Camisa extends Roupa {
 
 	private boolean gola;
@@ -49,8 +52,12 @@ public class Camisa extends Roupa {
 		return cor;
 	}
 
-	public void setCor(String cor) {
+	public void setCor (String cor) throws CorInvalidaException {
+		if(cor != null) {
+			throw new CorInvalidaException ("Cor Invalida.");
+		}
+		
 		this.cor = cor;
+		
 	}
-
 }

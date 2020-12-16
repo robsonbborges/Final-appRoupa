@@ -42,11 +42,12 @@ public class Bermuda extends Roupa {
 	}
 
 	public void setTamanho(float tamanho) throws ComplementoInvalidoException {
+		if(tamanho <=0) {
+			throw new ComplementoInvalidoException ("Tamanho Indisponivel.");
+		}
+		
 		this.tamanho = tamanho;
 		
-		if(tamanho <=0) {
-			throw new ComplementoInvalidoException ("Tamanha Indisponivel.");
-		}
 	}
 
 	public String getTecido() {

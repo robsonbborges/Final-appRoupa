@@ -1,5 +1,8 @@
 package br.edu.infnet.appRoupa.model.negocio;
 
+import br.edu.infnet.appRoupa.model.exception.BolsoInvalidoException;
+import br.edu.infnet.appRoupa.model.exception.CorInvalidaException;
+
 public class Jaqueta extends Roupa {
 	
 	private int bolso;
@@ -37,7 +40,11 @@ public class Jaqueta extends Roupa {
 		return bolso;
 	}
 
-	public void setBolso(int bolso) {
+	public void setBolso (int bolso) throws BolsoInvalidoException {
+		if(bolso <= 0) {
+			throw new BolsoInvalidoException ("Quantidade Invalida.");
+		}
+		
 		this.bolso = bolso;
 	}
 
